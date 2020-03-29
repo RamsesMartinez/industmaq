@@ -6,79 +6,70 @@
 
 /* Spotlight */
 
-	.spotlight {
-		@include vendor('display', 'flex');
-		@include vendor('align-items', 'center');
-		margin: 0 0 _size(element-margin) 0;
+.spotlight {
+  @include vendor("display", "flex");
+  @include vendor("align-items", "center");
+  margin: 0 0 _size(element-margin) 0;
+  height: 100vh;
 
-		.image {
-			width: 360px;
-			height: 360px;
-			border-radius: 100%;
-			display: block;
+  .image {
+	min-width: 360px;
+	max-width: 360px;
+    height: 360px;
+    border-radius: 100%;
+    display: block;
 
-			img {
-				display: block;
-				border-radius: 100%;
-				width: 100%;
-				height: 100%;
-				object-fit:cover;
-			}
-		}
+    img {
+      display: block;
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-		.content {
-			width: 70%;
-			padding-left: 3em;
+  .content {
+    width: auto;
+    padding-left: _size(element-margin);
 
-			> :last-child {
-				margin-bottom: 0;
-			}
-		}
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
 
-		&:nth-child(2n) {
-			@include vendor('flex-direction', 'row-reverse');
+  &:nth-child(2n) {
+    @include vendor("flex-direction", "row-reverse");
 
-			.image {
-				margin: 0 0 0 (_size(element-margin) * 1.5);
-			}
+    .content {
+      text-align: right;
+      padding-right: _size(element-margin);
+    }
+  }
 
-			.content {
-				text-align: right;
-			}
-		}
+  // XLarge.
+  @include breakpoint(">=xlarge") {
+    .image {
+      min-width: 380px !important;
+      min-height: 380px !important;
+    }
+  }
+  // Medium.
+  @include breakpoint("<=medium") {
+    .image {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  // Small.
+  @include breakpoint("<=small") {
+    // Portrait.
+    @include orientation(portrait) {
+      @include vendor("flex-direction", "column !important");
 
-		// Small.
-			@include breakpoint('<=small') {
-
-				// Landscape.
-					@include orientation(landscape) {
-						.image {
-							margin: 0 _size(element-margin) 0 0;
-						}
-
-						&:nth-child(2n) {
-							.image {
-								margin: 0 0 0 _size(element-margin);
-							}
-						}
-					}
-
-				// Portrait.
-					@include orientation(portrait) {
-						@include vendor('flex-direction', 'column !important');
-
-						.image {
-							width: 100%;
-							max-width: 60%;
-							margin: 0 0 _size(element-margin) 0 !important;
-						}
-
-						.content {
-							width: 100%;
-							text-align: center !important;
-						}
-					}
-
-			}
-
-	}
+      .content {
+        width: 100%;
+        text-align: center !important;
+      }
+    }
+  }
+}

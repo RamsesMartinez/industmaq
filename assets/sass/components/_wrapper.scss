@@ -10,7 +10,15 @@
 		@include padding(4.5em, 0);
 		background-color: #fbef4a;
 		border-bottom: solid (_size(border-width) * 2) lighten(_palette(border), 3);
-
+		
+		&#two {
+			background-image: url("/images/blue.png");
+			background-attachment: fixed;
+			background-position: 15% 55%;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		
 		> .inner {
 			margin-left: auto;
 			margin-right: auto;
