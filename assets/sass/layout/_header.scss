@@ -173,11 +173,6 @@
     }
   }
 
-  // Mobile.
-  body.is-mobile & {
-    background-attachment: scroll, scroll;
-  }
-
   // Preload.
   body.is-preload & {
     .content {
