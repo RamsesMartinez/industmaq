@@ -15,7 +15,7 @@
   background-image: url("images/portada 2.png"), url("images/pattern-size1.svg");
   background-position: top left, center center;
   background-attachment: fixed, fixed;
-  background-size: auto, cover;
+  background-size: cover;
   height: 100vh;
   min-height: 35em;
 
@@ -74,6 +74,7 @@
 
   // Medium.
   @include breakpoint("<=medium") {
+    background-image: url("/images/turur.png"), url("images/pattern-size3.svg");
     min-height: 0;
 
     .content {
@@ -105,10 +106,6 @@
 
   // Small.
   @include breakpoint("<=small") {
-    height: auto;
-    background-image: url("images/portada 2.png"),
-      url("images/pattern-size3.svg");
-
     .content {
       margin-top: 6em;
       img {
