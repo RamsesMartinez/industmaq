@@ -34,5 +34,16 @@ function browser_sync() {
   gulp.watch('./*.html').on('change', browserSync.reload)
 }
 
-exports.default = series(style, image, browser_sync)
+var webfont_config = {
+  types:'eot,woff2,woff,ttf,svg',
+  ligatures: true
+};
+
+
+function fonts() {
+  return gulp.src('./assets/webfonts/*')
+    .pipe(gulp.dest('build/webfonts/'));
+}
+
+exports.default = series(style, fonts, image, browser_sync)
 exports.style = style
