@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="build/main.css" />
     <link rel="stylesheet" href="build/tailwind.css" />
-    <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
     <link href="/build/font-awesome/fontawesome.css" rel="stylesheet" />
     <link href="/build/font-awesome/brands.css" rel="stylesheet" />
     <link href="/build/font-awesome/solid.css" rel="stylesheet" />
@@ -20,16 +20,28 @@
   </head>
 
   <body class="is-preload">
-    <div class="navbar-container">
-      <ul id="navbar">
-        <li><a href="#header">Inicio</a></li>
-        <li><a href="#products">Productos</a></li>
-        <li><a href="#brands">Marcas</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <div class="image-container">
-          <img class="img-navbar sm:display-none display-none" src="images/2.png" alt="logo" />
+    <nav class="fixed flex justify-between items-center bg-gray-100 text-sm px-8 w-full z-10">
+      <div class="flex px-5 pt-4 pb-3 w-full justify-center md:justify-start">
+        <img class="img-navbar md:block w-24 mr-3 sm:justify-self-center" src="images/2.png" alt="logo" />
+        <div class="text-xl mobile-menu" id="mobileMenu">
+          <a href="#one" class="px-2 text-gray-600 hover:text-gray-900">Inicio</a>
+          <a href="#products" class="px-2 text-gray-600 hover:text-gray-900"
+            >Productos</a
+          >
+          <a href="#brands" class="px-2 text-gray-600 hover:text-gray-900">Marcas</a>
+          <a href="#contact" class="px-2 text-gray-600 hover:text-gray-900"
+            >Contacto</a
+          >
         </div>
-      </ul>
+      </div>
+      <div class="mobile-display">
+        <button class="text-gray-700 shadow-none focus:outline-none active:bg-transparent" onclick="menuCollapse()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    </div> 
+    <div>
       <!-- Header -->
       <header id="header">
         <div class="content flex justify-center">
@@ -69,7 +81,7 @@
         <p class="mb-3 text-xl">
           Trabajo en equipo, Honradez, Respeto, Austeridad, Responsabilidad,
           Disciplina, Familia.
-        </h3>
+        </p>
       </section>
 
       <!-- Products -->
@@ -79,15 +91,19 @@
             <div class="image">
               <img src="images/tipos-de-cinta-adhesiva.jpg" alt="" />
             </div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Cintas adhesivas</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Cintas adhesivas
+              </h2>
               <p>De empaque y de uso industrial.</p>
             </div>
           </section>
           <section class="spotlight">
             <div class="image"><img src="images/ribbon3.png" alt="" /></div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Etiquetas de rollo y Ribbons.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Etiquetas de rollo y Ribbons.
+              </h2>
               <p>
                 Etiquetas para la identificación de paquetes de todas las
                 medidas.
@@ -96,8 +112,10 @@
           </section>
           <section class="spotlight">
             <div class="image"><img src="images/9.png" alt="" /></div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Burbuja y foam.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Burbuja y foam.
+              </h2>
               <p>
                 Para proteger el producto en los envíos y empaques. De todas las
                 medidas especiales que requiera el cliente.
@@ -108,8 +126,10 @@
             <div class="image">
               <img src="images/coverpack-pelicula-automatica.jpg" alt="" />
             </div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Emplaye.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Emplaye.
+              </h2>
               <p>
                 Películas de aplicación manual y automática. En todas sus
                 medidas y presentaciones de fabricación nacional y extranjero.
@@ -120,8 +140,10 @@
             <div class="image">
               <img src="images/esquineros-de-carton.jpg" alt="" />
             </div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Esquineros de cartón.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Esquineros de cartón.
+              </h2>
               <p>
                 Protección para evitar daños en sus envíos, en todas las medidas
                 y calibres, en color kraft o blanco.
@@ -131,8 +153,10 @@
           <!-- Flejes -->
           <section class="spotlight">
             <div class="image"><img src="images/green.jpg" alt="" /></div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Flejes y herramientas.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Flejes y herramientas.
+              </h2>
               <p>
                 Cinchos para el seguramiento de cargas pesadas de poliéster,
                 polipropileno, acero, así como todos los aditamentos como grapas
@@ -143,8 +167,10 @@
           <!-- Separadores -->
           <section class="spotlight">
             <div class="image"><img src="images/a1.jpg" alt="" /></div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Separadores de cartón y papel.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Separadores de cartón y papel.
+              </h2>
               <p>
                 Ideal para la protección y acomodo óptimo del producto dentro
                 del empaque.
@@ -156,8 +182,10 @@
             <div class="image">
               <img src="images/precorte-tubular-transparente.jpg" alt="" />
             </div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Bolsa de plástico.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Bolsa de plástico.
+              </h2>
               <p>
                 Bolsas de plástico transparentes granel o en rollo; y de
                 fabricación a medidas especiales, antiestéticas y
@@ -168,16 +196,20 @@
           <!-- Tarimas -->
           <section class="spotlight">
             <div class="image"><img src="images/images.jpg" alt="" /></div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Tarimas y contenedores.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Tarimas y contenedores.
+              </h2>
               <p>Tarimas y contenedores plastificadas de diferentes tamaños.</p>
             </div>
           </section>
           <!-- Sobres -->
           <section class="spotlight">
             <div class="image"><img src="images/6540049000.jpg" alt="" /></div>
-            <div class="content">
-              <h2 class="text-2xl pb-3">Sobres Packing List.</h2>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Sobres Packing List.
+              </h2>
               <p>
                 Sobres plásticos adhesivos con y sin impresión. Varias medidas.
               </p>
@@ -186,21 +218,73 @@
         </div>
       </section>
 
-	  <!-- Brands -->
-      <section id="brands" class="wrapper">
-        <div class="inner alt">
-          <section class="spotlight">
-            <div class="image">
-              <img src="images/tipos-de-cinta-adhesiva.jpg" alt="" />
+      <!-- Brands -->
+      <section id="brands" class="wrapper pt-0">
+        <img
+          src="build/images/brands/mood.png"
+          class="bg-gray-100 py-3 mb-5"
+          alt=""
+        />
+        <div class="container mx-auto">
+          <div class="flex flex-wrap justify-center">
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/1.png"
+              />
             </div>
-            <div class="content">
-              <h2>Cintas adhesivas</h2>
-              <p>De empaque y de uso industrial.</p>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/2.png"
+              />
             </div>
-          </section>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/3.png"
+              />
+            </div>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/4.png"
+              />
+            </div>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/5.png"
+              />
+            </div>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/6.png"
+              />
+            </div>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/7.png"
+              />
+            </div>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/8.png"
+              />
+            </div>
+            <div class="item w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/9.png"
+              />
+            </div>
+          </div>
         </div>
-	  </section>
-	  
+      </section>
+
       <!-- Contact -->
       <section id="contact-container" class="wrapper style2 special">
         <header id="contact" class="major">
@@ -229,5 +313,11 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      // function to toggle the show class, to display the menu on mobile screens.
+      function menuCollapse(){
+        document.getElementById("mobileMenu").classList.toggle("show");
+      }
+    </script>
   </body>
 </html>

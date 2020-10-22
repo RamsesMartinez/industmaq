@@ -85,6 +85,42 @@ body.is-preload *,body.is-preload *:before,body.is-preload *:after{
   transition:none !important
 }
 
+.mobile-display{
+  display:none
+}
+
+@media screen and (max-width: 768px){
+  .mobile-display{
+    display:inline-block
+  }
+
+  .mobile-collapse{
+    display:none
+  }
+
+  .mobile-menu{
+    display:none;
+    position:absolute;
+    margin-top:30px;
+    margin-left:0px !important;
+    padding:0px !important;
+    background-color:#f7fafc;
+    width:100%;
+    left:0
+  }
+
+  .mobile-menu a{
+    display:block;
+    width:100%;
+    padding:1rem;
+    margin-left:1.25rem
+  }
+}
+
+.show{
+  display:block
+}
+
 body{
   color:#999
 }
@@ -120,8 +156,7 @@ body,input,select,textarea{
 
 a{
   transition:color .2s ease-in-out,border-bottom-color .2s ease-in-out;
-  text-decoration:none;
-  border-bottom:dotted 1px
+  text-decoration:none
 }
 
 a:hover{
@@ -297,6 +332,10 @@ code{
 
 hr{
   border-bottom-color:#e6e6e6
+}
+
+.text-shadow{
+  text-shadow:0px 0px 4px #bbb
 }
 
 body{
@@ -2771,7 +2810,7 @@ table.alt tbody tr td{
   border-bottom:solid 2px #eee
 }
 
-.wrapper#products{
+.wrapper#products,.wrapper#brands{
   background-image:url("/build/images/fdfd.png");
   background-attachment:fixed;
   background-position:left bottom;

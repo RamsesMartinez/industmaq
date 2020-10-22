@@ -21,7 +21,7 @@ function style() {
 }
 
 function image() {
-  return gulp.src('./assets/css/images/*').pipe(imagemin()).pipe(gulp.dest('./build/images/'))
+  return gulp.src('./assets/css/images/*/*').pipe(imagemin()).pipe(gulp.dest('./build/images/'))
 }
 
 function browser_sync() {
