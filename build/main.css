@@ -2771,8 +2771,8 @@ table.alt tbody tr td{
   border-bottom:solid 2px #eee
 }
 
-.wrapper#two{
-  background-image:url("images/fdfd.png");
+.wrapper#products{
+  background-image:url("/build/images/fdfd.png");
   background-attachment:fixed;
   background-position:left bottom;
   background-repeat:no-repeat;
@@ -3595,7 +3595,7 @@ table.alt tbody tr td{
 
 @media screen and (max-width: 980px){
   #header{
-    background-image:url("images/turur.png"),url("images/pattern-size3.svg");
+    background-image:url("/images/turur.png"),url("images/pattern-size3.svg");
     min-height:0
   }
 
