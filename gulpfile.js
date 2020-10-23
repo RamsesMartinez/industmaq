@@ -4,15 +4,15 @@ const sass = require('gulp-sass')
 const browserSync = require('browser-sync').create()
 const postcss = require('gulp-postcss')
 const imagemin = require('gulp-imagemin')
+const rename = require('gulp-rename')
+const imagesConvert = require('gulp-images-convert')
 
 sass.compiler = require('node-sass')
 
 function style() {
   return gulp
     .src(['./assets/scss/**/*.scss', './assets/css/src/tailwind.css'])
-    .pipe(
-      sass()
-    )
+    .pipe(sass())
     .pipe(postcss([require('tailwindcss'), require('autoprefixer')]))
     .pipe(
       sass({
@@ -23,11 +23,31 @@ function style() {
     .pipe(browserSync.stream())
 }
 
-function image() {
-  return gulp.src('./assets/css/images/*/*').pipe(imagemin()).pipe(gulp.dest('./build/images/'))
+function imageMinTask() {
+  return gulp
+    .src('./assets/css/images/*/*')
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        }),
+      ])
+    )
+    .pipe(gulp.dest('./build/images/'))
 }
 
-function browser_sync() {
+function imageConvertTask() {
+  return gulp
+    .src('./build/images/*/*.png')
+    .pipe(imagesConvert({ targetType: 'jpg' }))
+    .pipe(rename({ extname: '.jpeg' }))
+    .pipe(gulp.dest('./build/images/'))
+}
+
+function browserSyncTask() {
   browserSync.init({
     server: {
       baseDir: './',
@@ -39,15 +59,24 @@ function browser_sync() {
 }
 
 var webfont_config = {
-  types:'eot,woff2,woff,ttf,svg',
-  ligatures: true
-};
-
-
-function fonts() {
-  return gulp.src('./assets/webfonts/*')
-    .pipe(gulp.dest('build/webfonts/'));
+  types: 'eot,woff2,woff,ttf,svg',
+  ligatures: true,
 }
 
-exports.default = series(style, fonts, image, browser_sync)
-exports.style = style
+function fonts() {
+  return gulp.src('./assets/webfonts/*').pipe(gulp.dest('build/webfonts/'))
+}
+
+exports.default = series(
+  style,
+  fonts,
+  imageMinTask,
+  imageConvertTask,
+  browserSyncTask
+)
+exports.style = series(
+  style,
+  fonts,
+  imageMinTask,
+  imageConvertTask
+)
