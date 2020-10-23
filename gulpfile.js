@@ -3,9 +3,7 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const browserSync = require('browser-sync').create()
 const postcss = require('gulp-postcss')
-const imagemin = require('gulp-imagemin')
-const rename = require('gulp-rename')
-const imagesConvert = require('gulp-images-convert')
+const webp = require('gulp-webp')
 
 sass.compiler = require('node-sass')
 
@@ -23,27 +21,14 @@ function style() {
     .pipe(browserSync.stream())
 }
 
-function imageMinTask() {
-  return gulp
-    .src('./assets/css/images/*/*')
-    .pipe(
-      imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 75, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-        imagemin.svgo({
-          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-        }),
-      ])
-    )
-    .pipe(gulp.dest('./build/images/'))
-}
-
 function imageConvertTask() {
   return gulp
-    .src('./build/images/*/*.png')
-    .pipe(imagesConvert({ targetType: 'jpg' }))
-    .pipe(rename({ extname: '.jpeg' }))
+    .src([
+      './assets/images/*',
+      './assets/css/images/*',
+      './assets/css/images/*/*',
+    ])
+    .pipe(webp())
     .pipe(gulp.dest('./build/images/'))
 }
 
@@ -67,16 +52,5 @@ function fonts() {
   return gulp.src('./assets/webfonts/*').pipe(gulp.dest('build/webfonts/'))
 }
 
-exports.default = series(
-  style,
-  fonts,
-  imageMinTask,
-  imageConvertTask,
-  browserSyncTask
-)
-exports.style = series(
-  style,
-  fonts,
-  imageMinTask,
-  imageConvertTask
-)
+exports.default = series(style, fonts, imageConvertTask, browserSyncTask)
+exports.style = series(style, fonts, imageConvertTask)
