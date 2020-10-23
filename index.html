@@ -7,18 +7,45 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="build/main.css" />
-    <link rel="stylesheet" href="build/tailwind.css" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="build/main.css"
     />
-    <link href="/build/font-awesome/fontawesome.css" rel="stylesheet" />
-    <link href="/build/font-awesome/brands.css" rel="stylesheet" />
-    <link href="/build/font-awesome/solid.css" rel="stylesheet" />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="build/tailwind.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="/build/font-awesome/fontawesome.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="/build/font-awesome/brands.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="/build/font-awesome/solid.css"
+    />
     <link rel="icon" href="/build/images/logo 80x80px.webp" />
     <noscript>
-      <link rel="stylesheet" href="build/noscript.css" />
+      <link rel="preload" href="build/noscript.css" />
     </noscript>
   </head>
 
@@ -114,7 +141,9 @@
             </div>
           </section>
           <section class="spotlight">
-            <div class="image"><img src="build/images/ribbon3.webp" alt="" /></div>
+            <div class="image">
+              <img src="build/images/ribbon3.webp" alt="" />
+            </div>
             <div class="content text-shadow">
               <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
                 Etiquetas de rollo y Ribbons.
@@ -139,7 +168,10 @@
           </section>
           <section class="spotlight">
             <div class="image">
-              <img src="build/images/coverpack-pelicula-automatica.webp" alt="" />
+              <img
+                src="build/images/coverpack-pelicula-automatica.webp"
+                alt=""
+              />
             </div>
             <div class="content text-shadow">
               <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
@@ -167,7 +199,9 @@
           </section>
           <!-- Flejes -->
           <section class="spotlight">
-            <div class="image"><img src="build/images/green.webp" alt="" /></div>
+            <div class="image">
+              <img src="build/images/green.webp" alt="" />
+            </div>
             <div class="content text-shadow">
               <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
                 Flejes y herramientas.
@@ -195,7 +229,10 @@
           <!-- Bolsa de plástico-->
           <section class="spotlight">
             <div class="image">
-              <img src="build/images/precorte-tubular-transparente.webp" alt="" />
+              <img
+                src="build/images/precorte-tubular-transparente.webp"
+                alt=""
+              />
             </div>
             <div class="content text-shadow">
               <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
@@ -210,7 +247,9 @@
           </section>
           <!-- Tarimas -->
           <section class="spotlight">
-            <div class="image"><img src="build/images/images.webp" alt="" /></div>
+            <div class="image">
+              <img src="build/images/images.webp" alt="" />
+            </div>
             <div class="content text-shadow">
               <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
                 Tarimas y contenedores.
@@ -220,7 +259,9 @@
           </section>
           <!-- Sobres -->
           <section class="spotlight">
-            <div class="image"><img src="build/images/6540049000.webp" alt="" /></div>
+            <div class="image">
+              <img src="build/images/6540049000.webp" alt="" />
+            </div>
             <div class="content text-shadow">
               <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
                 Sobres Packing List.
@@ -236,59 +277,61 @@
       <!-- Brands -->
       <section id="brands" class="wrapper pt-8 pb-32">
         <div class="container mx-auto text-center pt-12 pb-5">
-          <h2 class="text-5xl text-shadow text-gray-800">Marcas que representamos</h2>
+          <h2 class="text-3xl md:text-4xl lg:5xl text-shadow text-gray-800">
+            Marcas que representamos
+          </h2>
         </div>
         <div class="container mx-auto">
           <div class="flex flex-wrap justify-center">
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/1.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/2.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/3.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/4.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/5.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/6.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/7.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/8.webp"
               />
             </div>
-            <div class="item w-1/5 p-2 flex justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
               <img
                 class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
                 src="build/images/brands/9.webp"
@@ -320,12 +363,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
       // function to toggle the show class, to display the menu on mobile screens.
       function menuCollapse() {
