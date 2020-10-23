@@ -24,7 +24,6 @@ function style() {
 function imageConvertTask() {
   return gulp
     .src([
-      './assets/images/*',
       './assets/css/images/*',
       './assets/css/images/*/*',
     ])

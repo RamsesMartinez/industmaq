@@ -12,7 +12,7 @@
   @include vendor("align-items", "center");
   @include vendor("display", "flex");
   @include vendor("justify-content", "center");
-  background-image: url("images/portada 2.png"), url("images/pattern-size1.svg");
+  background-image: url("/build/images/portada 2.webp"), url("/build/images/pattern-size1.svg");
   background-position: top left, center center;
   background-attachment: fixed, fixed;
   background-size: cover;
@@ -68,13 +68,13 @@
 
   // Large.
   @include breakpoint("<=large") {
-    background-image: url("images/portada 2.png"),
-      url("images/pattern-size2.svg");
+    background-image: url("/build/images/portada 2.webp"),
+      url("/build/images/pattern-size2.svg");
   }
 
   // Medium.
   @include breakpoint("<=medium") {
-    background-image: url("/images/turur.png"), url("images/pattern-size3.svg");
+    background-image: url("/build/images/turur.webp"), url("/build/images/pattern-size3.svg");
     min-height: 0;
 
     .content {
