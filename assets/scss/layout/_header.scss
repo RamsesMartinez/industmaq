@@ -9,10 +9,11 @@
 #header {
   @include color(accent1);
   @include padding(4.5em, 0);
-  @include vendor("align-items", "center");
-  @include vendor("display", "flex");
-  @include vendor("justify-content", "center");
-  background-image: url("/build/images/portada 2.webp"), url("/build/images/pattern-size1.svg");
+  @include vendor('align-items', 'center');
+  @include vendor('display', 'flex');
+  @include vendor('justify-content', 'center');
+  background-image: url('/build/images/portada 2.webp'),
+    url('/build/images/pattern-size1.svg');
   background-position: top left, center center;
   background-attachment: fixed, fixed;
   background-size: cover;
@@ -35,8 +36,8 @@
   }
 
   .content {
-    @include vendor("transition", ("opacity 0.5s ease", "transform 1s ease"));
-    @include vendor("transform", "translateX(0)");
+    @include vendor('transition', ('opacity 0.5s ease', 'transform 1s ease'));
+    @include vendor('transform', 'translateX(0)');
     opacity: 1;
     text-align: center;
     margin: 0 auto;
@@ -46,7 +47,7 @@
     }
 
     .actions {
-      @include vendor("justify-content", "flex-end");
+      @include vendor('justify-content', 'flex-end');
     }
 
     img {
@@ -55,57 +56,25 @@
   }
 
   .image {
-    @include vendor("transition", ("opacity 1s ease", "transform 1s ease"));
-    @include vendor("transform", "translateY(0)");
+    @include vendor('transition', ('opacity 1s ease', 'transform 1s ease'));
+    @include vendor('transform', 'translateY(0)');
     opacity: 1;
 
     img {
-      @include vendor("transition", "opacity 0.75s ease");
-      @include vendor("transition-delay", "0.75s");
+      @include vendor('transition', 'opacity 0.75s ease');
+      @include vendor('transition-delay', '0.75s');
       opacity: 1;
     }
   }
 
   // Large.
-  @include breakpoint("<=large") {
-    background-image: url("/build/images/portada 2.webp"),
-      url("/build/images/pattern-size2.svg");
-  }
-
-  // Medium.
-  @include breakpoint("<=medium") {
-    background-image: url("/build/images/turur.webp"), url("/build/images/pattern-size3.svg");
-    min-height: 0;
-
-    .content {
-      img {
-        width: 75%;
-      }
-
-      .actions {
-        @include vendor("justify-content", "center");
-      }
-    }
-
-    // Portrait.
-    @include orientation(portrait) {
-      @include padding(6em, 3em);
-
-      .content {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-      }
-
-      .image {
-        overflow: hidden;
-      }
-    }
+  @include breakpoint('<=large') {
+    background-image: url('/build/images/portada 2.webp'),
+      url('/build/images/pattern-size2.svg');
   }
 
   // Small.
-  @include breakpoint("<=small") {
+  @include breakpoint('<=small') {
     .content {
       margin-top: 6em;
       img {
@@ -153,7 +122,7 @@
   }
 
   // XSmall.
-  @include breakpoint("<=xsmall") {
+  @include breakpoint('<=xsmall') {
     // Landscape.
     @include orientation(landscape) {
       @include padding(2em, 1.5em);
@@ -173,16 +142,10 @@
     }
   }
 
-
   // Preload.
   body.is-preload & {
-    .content {
-      @include vendor("transform", "translateX(2em)");
-      opacity: 0;
-    }
-
     .image {
-      @include vendor("transform", "translateY(4em)");
+      @include vendor('transform', 'translateY(4em)');
       opacity: 0;
 
       img {
@@ -191,16 +154,16 @@
     }
 
     // Medium.
-    @include breakpoint("<=medium") {
+    @include breakpoint('<=medium') {
       // Portrait.
       @include orientation(portrait) {
         .content {
-          @include vendor("transform", "none");
+          @include vendor('transform', 'none');
           opacity: 1;
         }
 
         .image {
-          @include vendor("transform", "translateY(2em)");
+          @include vendor('transform', 'translateY(2em)');
         }
       }
     }
