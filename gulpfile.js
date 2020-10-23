@@ -4,6 +4,7 @@ const sass = require('gulp-sass')
 const browserSync = require('browser-sync').create()
 const postcss = require('gulp-postcss')
 const webp = require('gulp-webp')
+const purgecss = require('gulp-purgecss')
 
 sass.compiler = require('node-sass')
 
@@ -17,6 +18,9 @@ function style() {
         outputStyle: 'compressed',
       })
     )
+    .pipe(purgecss({
+      content: ['./**/*.html']
+  }))
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.stream())
 }
