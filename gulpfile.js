@@ -31,6 +31,7 @@ function browser_sync() {
     },
   })
   gulp.watch('./assets/scss/**/*.scss', style)
+  gulp.watch('./assets/css/**/*.css', style)
   gulp.watch('./*.html').on('change', browserSync.reload)
 }
 
