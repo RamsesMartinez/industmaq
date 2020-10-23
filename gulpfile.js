@@ -11,11 +11,14 @@ function style() {
   return gulp
     .src(['./assets/scss/**/*.scss', './assets/css/src/tailwind.css'])
     .pipe(
+      sass()
+    )
+    .pipe(postcss([require('tailwindcss'), require('autoprefixer')]))
+    .pipe(
       sass({
         outputStyle: 'compressed',
       })
     )
-    .pipe(postcss([require('tailwindcss'), require('autoprefixer')]))
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.stream())
 }
