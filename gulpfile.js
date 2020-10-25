@@ -12,15 +12,13 @@ function style() {
   return gulp
     .src(['./assets/scss/**/*.scss', './assets/css/src/tailwind.css'])
     .pipe(sass())
+    .pipe(purgecss({content: ['./**/*.html']}))
     .pipe(postcss([require('tailwindcss'), require('autoprefixer')]))
     .pipe(
       sass({
         outputStyle: 'compressed',
       })
     )
-    .pipe(purgecss({
-      content: ['./**/*.html']
-  }))
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.stream())
 }
