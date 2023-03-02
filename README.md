@@ -2,7 +2,7 @@
 
 ## Instalation
 ```bash
-npm run install --save-dev
+npm install --save-dev
 ```
 
 ## Deploy
