@@ -19,7 +19,7 @@
 
 [build.environment]
   NETLIFY_USE_YARN = "true"
-  NODE_VERSION = "16.15.1"
+  NODE_VERSION = "20.18.1"
 
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.

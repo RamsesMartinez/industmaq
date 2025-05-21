@@ -1,0 +1,206 @@
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 15px;
+
+  &__separator {
+    width: 50px;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2rem auto 3rem;
+  }
+
+  &__group {
+    margin-bottom: 1.5rem;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #454545 !important;
+    
+    &::placeholder {
+      color: #777 !important;
+      font-weight: 700 !important;
+      font-size: 0.95rem !important;
+      opacity: 1 !important;
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: #ddd;
+      color: #353535 !important;
+    }
+  }
+
+  &__textarea {
+    @extend .contact-form__input;
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  &__button {
+    width: 100% !important;
+    padding: 1.2rem 1.8rem !important; 
+    margin-top: 1rem !important;
+    background-color: #364594 !important;
+    border: 1px solid #364594 !important;
+    border-radius: 0 !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, border-color 0.3s !important;
+    box-shadow: none !important;
+    line-height: 1.5 !important;
+    
+    &:hover {
+      background-color: #2d3a7d !important;
+      border-color: #2d3a7d !important;
+      color: #fff !important;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    margin-top: 2.5rem;
+    
+    h3 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 0.5rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    
+    strong {
+      font-weight: 500;
+      color: #444;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+} 
+
+/* Asegurando que nuestros estilos sobreescriban cualquier estilo del wrapper */
+.wrapper .contact-form__button,
+.wrapper.style1 .contact-form__button,
+.wrapper.style2 .contact-form__button,
+.wrapper.style3 .contact-form__button {
+  width: 100% !important;
+  padding: 0.8rem 1.2rem !important; 
+  background-color: #364594 !important;
+  border: 1px solid #364594 !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  
+  &:hover {
+    background-color: #2d3a7d !important;
+    border-color: #2d3a7d !important;
+    color: #fff !important;
+  }
+} 
+
+/* Asegurando que los estilos de placeholder se apliquen correctamente */
+.wrapper ::-webkit-input-placeholder,
+.wrapper.style1 ::-webkit-input-placeholder,
+.wrapper.style2 ::-webkit-input-placeholder,
+.wrapper.style3 ::-webkit-input-placeholder,
+.contact-form ::-webkit-input-placeholder {
+  color: #555 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.wrapper :-moz-placeholder,
+.wrapper.style1 :-moz-placeholder,
+.wrapper.style2 :-moz-placeholder,
+.wrapper.style3 :-moz-placeholder,
+.contact-form :-moz-placeholder {
+  color: #555 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.wrapper ::-moz-placeholder,
+.wrapper.style1 ::-moz-placeholder,
+.wrapper.style2 ::-moz-placeholder,
+.wrapper.style3 ::-moz-placeholder,
+.contact-form ::-moz-placeholder {
+  color: #555 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.wrapper :-ms-input-placeholder,
+.wrapper.style1 :-ms-input-placeholder,
+.wrapper.style2 :-ms-input-placeholder,
+.wrapper.style3 :-ms-input-placeholder,
+.contact-form :-ms-input-placeholder {
+  color: #555 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.wrapper .formerize-placeholder,
+.wrapper.style1 .formerize-placeholder,
+.wrapper.style2 .formerize-placeholder,
+.wrapper.style3 .formerize-placeholder,
+.contact-form .formerize-placeholder {
+  color: #555 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+} 
+
+/* Asegurando que el texto de los inputs sea negro */
+.wrapper input[type="text"],
+.wrapper input[type="tel"],
+.wrapper input[type="email"],
+.wrapper textarea,
+.wrapper.style1 input[type="text"],
+.wrapper.style1 input[type="tel"],
+.wrapper.style1 input[type="email"],
+.wrapper.style1 textarea,
+.wrapper.style2 input[type="text"],
+.wrapper.style2 input[type="tel"],
+.wrapper.style2 input[type="email"],
+.wrapper.style2 textarea,
+.wrapper.style3 input[type="text"],
+.wrapper.style3 input[type="tel"],
+.wrapper.style3 input[type="email"],
+.wrapper.style3 textarea,
+.contact-form__input,
+.contact-form__textarea {
+  color: #000 !important;
+  font-weight: 600 !important;
+} 

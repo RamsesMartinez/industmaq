@@ -6,13 +6,11 @@ const postcss = require('gulp-postcss')
 const webp = require('gulp-webp')
 const purgecss = require('gulp-purgecss')
 
-sass.compiler = require('node-sass')
-
 function style() {
   return gulp
     .src(['./assets/scss/**/*.scss', './assets/css/src/tailwind.css'])
-    .pipe(sass())
-    .pipe(purgecss({content: ['./**/*.html']}))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(purgecss({content: ['./*.html']}))
     .pipe(postcss([require('tailwindcss'), require('autoprefixer')]))
     .pipe(
       sass({

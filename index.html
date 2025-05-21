@@ -1,335 +1,465 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>INDUSTMAQ</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="build/main.css" />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="build/tailwind.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="/build/font-awesome/solid.css"
+    />
+    <link rel="icon" href="/build/images/logo 80x80px.webp" />
+    <noscript>
+      <link rel="preload" href="build/noscript.css" />
+    </noscript>
+  </head>
 
-<head>
-  <title>INDUSTMAQ</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="build/main.css" />
-  <link rel="preload" as="style" onload="this.rel='stylesheet'" href="build/tailwind.css" />
-  <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/build/font-awesome/solid.css" />
-  <link rel="icon" href="/build/images/logo 80x80px.webp" />
-  <noscript>
-    <link rel="preload" href="build/noscript.css" />
-  </noscript>
-</head>
-
-<body class="is-preload">
-  <nav class="fixed flex justify-between items-center bg-gray-100 text-sm px-8 w-full z-10">
-    <div class="flex px-5 pt-4 pb-3 w-full justify-center md:justify-start">
-      <img class="img-navbar md:block w-24 mr-3 sm:justify-self-center" src="build/images/2.webp" alt="logo" />
-      <div class="text-xl mobile-menu" id="mobileMenu">
-        <a href="#one" class="px-2 text-gray-600 hover:text-gray-900">Inicio</a>
-        <a href="#products" class="px-2 text-gray-600 hover:text-gray-900">Productos</a>
-        <a href="#brands" class="px-2 text-gray-600 hover:text-gray-900">Marcas</a>
-        <a href="#contact" class="px-2 text-gray-600 hover:text-gray-900">Contacto</a>
-      </div>
-    </div>
-    <div class="mobile-display">
-      <button class="text-gray-700 shadow-none focus:outline-none active:bg-transparent" onclick="menuCollapse()">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </nav>
-  <div>
-    <!-- Header -->
-    <header id="header">
-      <div class="content flex justify-center">
-        <img src="build/images/2.webp" alt="" />
-      </div>
-    </header>
-
-    <!-- One -->
-    <section id="one" class="wrapper style2 special leading-normal pb-5">
-      <header id="about" class="major text-3xl">
-        <h2>
-          Somos un aliado estratégico en la cadena <br />
-          de suministro de nuestros clientes ofreciendo <br />
-          productos de empaque y embalaje de la mejor calidad.
-        </h2>
-      </header>
-      <p class="text-xl">
-        Distribuimos una amplia variedad de soluciones de empaque <br />
-        y embalaje de fabricantes nacionales e internacionales. <br />
-      </p>
-      <h2 class="mt-5 mb-2 text-2xl">Nuestra Visión</h2>
-      <p class="text-xl">
-        Ser un aliado estratégico en la cadena de suministro de nuestros
-        clientes ofreciendo <br />
-        excelentes productos y servicios de <br />
-        empaque industrial, y ser reconocidos como líderes en el mercado
-        nacional. <br />
-      </p>
-      <h2 class="mt-5 mb-2 text-2xl">Nuestra Misión</h2>
-      <p class="mb-3 text-xl">
-        Satisfacer al cliente con servicios y productos innovadores de la más
-        alta calidad en la <br />
-        industria a través del mejor talento humano y tecnología, <br />
-        entregando siempre a tiempo y con eficiencia. <br />
-      </p>
-      <h2 class="mt-5 mb-2 text-2xl">Nuestros Valores</h2>
-      <p class="mb-3 text-xl">
-        Trabajo en equipo, Honradez, Respeto, Austeridad, Responsabilidad,
-        Disciplina, Familia.
-      </p>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="wrapper">
-      <div class="inner alt">
-        <!-- Empaques de cartón -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/CAJAS INDUSTMAQ.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Empaques de cartón.
-            </h2>
-            <p>
-              Cajas RSC, HSC, troqueladas, pizzeras, particiones, pads, insertos, tapas autoarmables y sencillas...
-              Flautas sencillas,
-              (C, E, B) dobles (BC), con diferentes resistencias, 30, 40,42,48, 51 ECT y más.
-
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/maquina_emplayadora.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Máquina emplayadora 2100 SRT.
-            </h2>
-            <p>Modelo semiautomático.</p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/tipos-de-cinta-adhesiva.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Cintas adhesivas.
-            </h2>
-            <p>De empaque y de uso industrial.</p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/ribbon3.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Etiquetas de rollo y Ribbons.
-            </h2>
-            <p>
-              Etiquetas para la identificación de paquetes de todas las
-              medidas.
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image"><img src="build/images/9.webp" alt="" /></div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Burbuja y foam.
-            </h2>
-            <p>
-              Para proteger el producto en los envíos y empaques. De todas las
-              medidas especiales que requiera el cliente.
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/coverpack-pelicula-automatica.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Emplaye.
-            </h2>
-            <p>
-              Películas de aplicación manual y automática. En todas sus
-              medidas y presentaciones de fabricación nacional y extranjero.
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/esquineros-de-carton.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Esquineros de cartón.
-            </h2>
-            <p>
-              Protección para evitar daños en sus envíos, en todas las medidas
-              y calibres, en color kraft o blanco.
-            </p>
-          </div>
-        </section>
-        <!-- Flejes -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/green.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Flejes y herramientas.
-            </h2>
-            <p>
-              Cinchos para el seguramiento de cargas pesadas de poliéster,
-              polipropileno, acero, así como todos los aditamentos como grapas
-              o sellos.
-            </p>
-          </div>
-        </section>
-        <!-- Separadores -->
-        <section class="spotlight">
-          <div class="image"><img src="build/images/a1.webp" alt="" /></div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Separadores de cartón y papel.
-            </h2>
-            <p>
-              Ideal para la protección y acomodo óptimo del producto dentro
-              del empaque.
-            </p>
-          </div>
-        </section>
-        <!-- Bolsa de plástico-->
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/precorte-tubular-transparente.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Bolsa de plástico.
-            </h2>
-            <p>
-              Bolsas de plástico transparentes granel o en rollo; y de
-              fabricación a medidas especiales, antiestéticas y
-              anticorrosivas.
-            </p>
-          </div>
-        </section>
-        <!-- Tarimas -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/images.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Tarimas y contenedores.
-            </h2>
-            <p>Tarimas y contenedores plastificadas de diferentes tamaños.</p>
-          </div>
-        </section>
-        <!-- Sobres -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="build/images/6540049000.webp" alt="" />
-          </div>
-          <div class="content text-shadow">
-            <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
-              Sobres Packing List.
-            </h2>
-            <p>
-              Sobres plásticos adhesivos con y sin impresión. Varias medidas.
-            </p>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- Brands -->
-    <section id="brands" class="wrapper pt-8 pb-32">
-      <div class="container mx-auto text-center pt-12 pb-5">
-        <h2 class="text-3xl md:text-4xl lg:5xl text-shadow text-gray-800">
-          Marcas que representamos
-        </h2>
-      </div>
-      <div class="container mx-auto">
-        <div class="flex flex-wrap justify-center">
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/1.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/2.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/3.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/4.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/5.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/6.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/7.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/8.webp" />
-          </div>
-          <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
-            <img
-              class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
-              src="build/images/brands/9.webp" />
-          </div>
+  <body class="is-preload">
+    <nav
+      class="fixed flex justify-between items-center bg-gray-100 text-sm px-8 w-full z-10"
+    >
+      <div class="flex px-5 pt-4 pb-3 w-full justify-center md:justify-start">
+        <img
+          class="img-navbar md:block w-24 mr-3 sm:justify-self-center"
+          src="build/images/2.webp"
+          alt="logo"
+        />
+        <div class="text-xl mobile-menu" id="mobileMenu">
+          <a href="#one" class="px-2 text-gray-600 hover:text-gray-900"
+            >Inicio</a
+          >
+          <a href="#products" class="px-2 text-gray-600 hover:text-gray-900"
+            >Productos</a
+          >
+          <a href="#brands" class="px-2 text-gray-600 hover:text-gray-900"
+            >Marcas</a
+          >
+          <a href="#contact" class="px-2 text-gray-600 hover:text-gray-900"
+            >Contacto</a
+          >
         </div>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact-container" class="wrapper style2 special">
-      <header id="contact" class="major">
-        <p class="text-3xl pb-1 text-gray-700">Contacto</p>
-        <p class="text-gray-700">Tel: 6563967625 </p>
-        <br />
-        <p class="text-gray-700">Dirección: Cd. Juárez, Chihuahua</p>
-        <br />
-        <p class="text-gray-700">Email: atencionalcliente@conmaq.net</p>
-        <br />
+      <div class="mobile-display">
+        <button
+          class="text-gray-700 shadow-none focus:outline-none active:bg-transparent"
+          onclick="menuCollapse()"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <div>
+      <!-- Header -->
+      <header id="header">
+        <div class="content flex justify-center">
+          <img src="build/images/2.webp" alt="" />
+        </div>
       </header>
-    </section>
 
-    <!-- Four -->
+      <!-- One -->
+      <section id="one" class="wrapper style2 special leading-normal pb-5">
+        <header id="about" class="major text-3xl">
+          <h2>
+            Somos un aliado estratégico en la cadena <br />
+            de suministro de nuestros clientes ofreciendo <br />
+            productos de empaque y embalaje de la mejor calidad.
+          </h2>
+        </header>
+        <p class="text-xl">
+          Distribuimos una amplia variedad de soluciones de empaque <br />
+          y embalaje de fabricantes nacionales e internacionales. <br />
+        </p>
+        <h2 class="mt-5 mb-2 text-2xl">Nuestra Visión</h2>
+        <p class="text-xl">
+          Ser un aliado estratégico en la cadena de suministro de nuestros
+          clientes ofreciendo <br />
+          excelentes productos y servicios de <br />
+          empaque industrial, y ser reconocidos como líderes en el mercado
+          nacional. <br />
+        </p>
+        <h2 class="mt-5 mb-2 text-2xl">Nuestra Misión</h2>
+        <p class="mb-3 text-xl">
+          Satisfacer al cliente con servicios y productos innovadores de la más
+          alta calidad en la <br />
+          industria a través del mejor talento humano y tecnología, <br />
+          entregando siempre a tiempo y con eficiencia. <br />
+        </p>
+        <h2 class="mt-5 mb-2 text-2xl">Nuestros Valores</h2>
+        <p class="mb-3 text-xl">
+          Trabajo en equipo, Honradez, Respeto, Austeridad, Responsabilidad,
+          Disciplina, Familia.
+        </p>
+      </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <ul class="icons"></ul>
-    </footer>
-  </div>
+      <!-- Products -->
+      <section id="products" class="wrapper">
+        <div class="inner alt">
+          <!-- Empaques de cartón -->
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/CAJAS INDUSTMAQ.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Empaques de cartón.
+              </h2>
+              <p>
+                Cajas RSC, HSC, troqueladas, pizzeras, particiones, pads,
+                insertos, tapas autoarmables y sencillas... Flautas sencillas,
+                (C, E, B) dobles (BC), con diferentes resistencias, 30,
+                40,42,48, 51 ECT y más.
+              </p>
+            </div>
+          </section>
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/maquina_emplayadora.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Máquina emplayadora 2100 SRT.
+              </h2>
+              <p>Modelo semiautomático.</p>
+            </div>
+          </section>
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/tipos-de-cinta-adhesiva.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Cintas adhesivas.
+              </h2>
+              <p>De empaque y de uso industrial.</p>
+            </div>
+          </section>
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/ribbon3.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Etiquetas de rollo y Ribbons.
+              </h2>
+              <p>
+                Etiquetas para la identificación de paquetes de todas las
+                medidas.
+              </p>
+            </div>
+          </section>
+          <section class="spotlight">
+            <div class="image"><img src="build/images/9.webp" alt="" /></div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Burbuja y foam.
+              </h2>
+              <p>
+                Para proteger el producto en los envíos y empaques. De todas las
+                medidas especiales que requiera el cliente.
+              </p>
+            </div>
+          </section>
+          <section class="spotlight">
+            <div class="image">
+              <img
+                src="build/images/coverpack-pelicula-automatica.webp"
+                alt=""
+              />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Emplaye.
+              </h2>
+              <p>
+                Películas de aplicación manual y automática. En todas sus
+                medidas y presentaciones de fabricación nacional y extranjero.
+              </p>
+            </div>
+          </section>
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/esquineros-de-carton.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Esquineros de cartón.
+              </h2>
+              <p>
+                Protección para evitar daños en sus envíos, en todas las medidas
+                y calibres, en color kraft o blanco.
+              </p>
+            </div>
+          </section>
+          <!-- Flejes -->
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/green.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Flejes y herramientas.
+              </h2>
+              <p>
+                Cinchos para el seguramiento de cargas pesadas de poliéster,
+                polipropileno, acero, así como todos los aditamentos como grapas
+                o sellos.
+              </p>
+            </div>
+          </section>
+          <!-- Separadores -->
+          <section class="spotlight">
+            <div class="image"><img src="build/images/a1.webp" alt="" /></div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Separadores de cartón y papel.
+              </h2>
+              <p>
+                Ideal para la protección y acomodo óptimo del producto dentro
+                del empaque.
+              </p>
+            </div>
+          </section>
+          <!-- Bolsa de plástico-->
+          <section class="spotlight">
+            <div class="image">
+              <img
+                src="build/images/precorte-tubular-transparente.webp"
+                alt=""
+              />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Bolsa de plástico.
+              </h2>
+              <p>
+                Bolsas de plástico transparentes granel o en rollo; y de
+                fabricación a medidas especiales, antiestéticas y
+                anticorrosivas.
+              </p>
+            </div>
+          </section>
+          <!-- Tarimas -->
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/images.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Tarimas y contenedores.
+              </h2>
+              <p>Tarimas y contenedores plastificadas de diferentes tamaños.</p>
+            </div>
+          </section>
+          <!-- Sobres -->
+          <section class="spotlight">
+            <div class="image">
+              <img src="build/images/6540049000.webp" alt="" />
+            </div>
+            <div class="content text-shadow">
+              <h2 class="text-2xl pb-3 mt-3 font-semibold font-sans">
+                Sobres Packing List.
+              </h2>
+              <p>
+                Sobres plásticos adhesivos con y sin impresión. Varias medidas.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
 
-  <!-- Scripts -->
-  <script>
-    // function to toggle the show class, to display the menu on mobile screens.
-    function menuCollapse() {
-      document.getElementById('mobileMenu').classList.toggle('show')
-    }
-  </script>
-</body>
+      <!-- Brands -->
+      <section id="brands" class="wrapper pt-8 pb-32">
+        <div class="container mx-auto text-center pt-12 pb-5">
+          <h2 class="text-3xl md:text-4xl lg:5xl text-shadow text-gray-800">
+            Marcas que representamos
+          </h2>
+        </div>
+        <div class="container mx-auto">
+          <div class="flex flex-wrap justify-center">
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/1.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/2.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/3.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/4.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/5.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/6.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/7.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/8.webp"
+              />
+            </div>
+            <div class="item w-full md:w-2/5 lg:w-1/5 p-2 flex justify-center">
+              <img
+                class="object-scale-down h-48 w-auto hover:-translate-y-1 hover:scale-110 transform transition duration-500 ease-in-out cursor-pointer"
+                src="build/images/brands/9.webp"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Política de Calidad -->
+      <section id="quality-policy" class="wrapper style2 special py-16">
+        <div class="container mx-auto text-center px-4">
+          <div class="mb-16">
+            <img
+              src="build/images/2.webp"
+              alt="Logo INDUSTMAQ"
+              class="mx-auto w-50"
+              style="max-width: 500px"
+            />
+          </div>
+          <h2 class="text-4xl text-gray-900 mb-16 mt-8" style="color: #353535">
+            POLÍTICA DE CALIDAD
+          </h2>
+          <div class="mx-auto px-4" style="max-width: 800px">
+            <p class="text-xl text-gray-700">
+              En INDUSTMAQ estamos comprometidos con la satisfacción de nuestros
+              clientes cumpliendo sus requisitos, a través del sistema de
+              gestión de calidad, el mejoramiento continuo de nuestros procesos,
+              así como el desarrollo integral de nuestro personal.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact-container" class="wrapper style2 special py-16">
+        <header id="contact" class="major">
+          <h2 class="text-4xl" style="color: #353535">Contacto</h2>
+        </header>
+
+        <div class="contact-form">
+          <form id="contactForm" action="https://formspree.io/atencionalcliente@conmaq.net" method="POST">
+            <div class="contact-form__group">
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Nombre"
+                class="contact-form__input"
+                required
+              />
+            </div>
+
+            <div class="contact-form__group">
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Teléfono"
+                class="contact-form__input"
+                required
+              />
+            </div>
+
+            <div class="contact-form__group">
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Mensaje"
+                class="contact-form__textarea"
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-form__group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Correo"
+                class="contact-form__input"
+                required
+              />
+            </div>
+            
+            <!-- Campo oculto para personalizar el asunto -->
+            <input type="hidden" name="_subject" value="Contacto desde sitio web INDUSTMAQ" />
+            
+            <!-- Elimino el campo de redirección hasta que tengamos la página de gracias -->
+            <!-- <input type="hidden" name="_next" value="https://industmaq.com/gracias.html" /> -->
+
+            <button type="submit" class="contact-form__button">
+              ENVIAR MENSAJE
+            </button>
+          </form>
+
+          <div class="contact-form__info">
+            <h3>Información de Contacto</h3>
+            <p><strong>Dirección:</strong> Cd. Juárez, Chihuahua</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:atencionalcliente@conmaq.net"
+                >atencionalcliente@conmaq.net</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Four -->
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons"></ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // function to toggle the show class, to display the menu on mobile screens.
+      function menuCollapse() {
+        document.getElementById('mobileMenu').classList.toggle('show')
+      }
+    </script>
+  </body>
 </html>
