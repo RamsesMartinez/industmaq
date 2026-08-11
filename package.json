@@ -29,7 +29,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-webp": "^4.0.1",
     "imagemin-gifsicle": "^7.0.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.5.26",
     "sass": "^1.69.5"
   },
   "dependencies": {
