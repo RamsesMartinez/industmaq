@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/RamsesMartinez/industmaq#readme",
   "devDependencies": {
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.4",
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
     "gulp-purgecss": "^5.0.0",
